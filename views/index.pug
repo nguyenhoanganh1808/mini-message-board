@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  a(href="http://localhost:3000/new") Add new message
+  ul
+    each message in messages
+      li= message.user +  ": " + message.text + "(" + message.added + ")"
